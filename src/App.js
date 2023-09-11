@@ -23,19 +23,15 @@ const DUMMY = [
         date: new Date(2021, 5, 12),
     },
 ];
-{  console.log (DUMMY);}
 function App() {
     const[expenses, setExpenses] = useState(DUMMY);
 
     const addExpense = function (expense){
-        console.log("expense in app.js " , expense);
         setExpenses((previousStateValues) =>{
             return [expense, ...previousStateValues];
 
         })
     }
-
-    console.log(">>>>>>>>>>>>>>>>> " , expenses)
 
     return (
 

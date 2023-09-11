@@ -8,7 +8,6 @@ function Expenses(props) {
    const[ filteredYear, setFilteredYear] = useState(2020);
 
     const filterChangeHandler = function (selectedYear){
-        console.log("Year is ", selectedYear);
         setFilteredYear(selectedYear);
     }
 

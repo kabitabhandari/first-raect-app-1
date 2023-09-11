@@ -7,7 +7,6 @@ const ExpensesFilter = (props) => {
     function dropdownChangeHandler(event){
 
         const userDesiredDate = event.target.value
-        console.log("user selected date is :: " , userDesiredDate)
         props.onChangeDateFilter(userDesiredDate);
 
     }

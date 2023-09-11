@@ -30,13 +30,16 @@ function App() {
         console.log("expense in app.js " , expense);
     }
 
+    const filterHere = function (p){
+
+    }
     return (
 
         <div>
             <h2>Let's get started!</h2>
             <Expenses expenseItem = {expenses}></Expenses>
             <UserInputExpense addExpenseHandler = {addExpense}/>
-            <ExpenseFilter />
+            <ExpenseFilter pass = {filterHere} />
         </div>
     );
 }

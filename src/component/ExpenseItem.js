@@ -4,6 +4,7 @@ import Card from "./Card";
 import React from 'react';
 
 function ExpenseItem(props) {
+    console.log("props in ExpenseItem ", props)
 
     return (
         <Card className='expense-item'>

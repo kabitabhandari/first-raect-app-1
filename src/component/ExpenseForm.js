@@ -12,6 +12,8 @@ function ExpenseForm(props){
     function genericChangeHandler(labelIdentifier, value){
         if(labelIdentifier === 'Date'){
             setNewDate(value)
+            console.log("full date is > " , date )
+            console.log("full date is >>>>" , value )
         }
         if(labelIdentifier === 'Amount'){
             setNewAmt(value)
@@ -22,9 +24,9 @@ function ExpenseForm(props){
     const submit = function submitHandler(event){
         event.preventDefault();
         const expenseData = {
-            titleIs : title,
-            dateIs : new Date(date),
-            amountIs : amount
+            title : title,
+            date : new Date(date),
+            amount : amount
         }
         console.log(" Expense Object received from User: ", expenseData);
         props.onSaveUserData(expenseData);

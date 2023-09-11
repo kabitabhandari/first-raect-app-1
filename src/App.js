@@ -1,5 +1,7 @@
 import './App.css';
 import Expenses from "./component/Expenses"
+import UserInputExpense from "./component/UserInputExpense";
+import ExpenseFilter from "./component/ExpenseFilter";
 
 function App() {
     const expenses = [
@@ -24,11 +26,17 @@ function App() {
         },
     ];
 
+    const addExpense = function (expense){
+        console.log("expense in app.js " , expense);
+    }
+
     return (
 
         <div>
             <h2>Let's get started!</h2>
             <Expenses expenseItem = {expenses}></Expenses>
+            <UserInputExpense addExpenseHandler = {addExpense}/>
+            <ExpenseFilter />
         </div>
     );
 }
